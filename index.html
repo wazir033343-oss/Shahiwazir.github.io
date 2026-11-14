@@ -1,264 +1,310 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070b18">
 <title>WAZIR DEVELOPER | Shahid Wazir</title>
-<meta name="description" content="Professional web development, app development and AI solutions by Shahid Wazir.">
+<meta name="description" content="Shahid Wazir - Web Developer, App Developer and AI Enthusiast.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --bg:#060a19;
- --card:#101a32;
- --blue:#12baff;
- --purple:#9333ff;
- --white:#f5f7ff;
- --muted:#a7b2ca;
+ --bg:#070b18;
+ --surface:#101a30;
+ --blue:#19baff;
+ --purple:#9b4dff;
+ --white:#f6f7ff;
+ --muted:#a4b0c9;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
 body{
  background:var(--bg);color:var(--white);
  font-family:Inter,Arial,sans-serif;
  overflow-x:hidden;
 }
 a{text-decoration:none;color:inherit}
-.container{width:90%;max-width:1180px;margin:auto}
-section{padding:90px 0}
+button{font-family:inherit}
+.container{width:min(1140px,90%);margin:auto}
+section{padding:85px 0}
 .gradient{
- background:linear-gradient(90deg,#08c4ff,#a13cff);
+ background:linear-gradient(90deg,#16c4ff,#a34bff);
  -webkit-background-clip:text;
- color:transparent;
+ background-clip:text;color:transparent;
 }
-.section-title{text-align:center;font-size:38px;font-weight:900}
-.section-sub{text-align:center;color:var(--muted);margin:13px 0 42px;line-height:1.7}
+.section-heading{text-align:center;margin-bottom:42px}
+.section-heading h2{font-size:clamp(28px,5vw,42px);font-weight:900}
+.section-heading p{color:var(--muted);font-size:14px;margin-top:12px}
 
-/* Background effects */
-body:before,body:after{
- content:"";position:fixed;width:350px;height:350px;
- border-radius:50%;filter:blur(120px);
- pointer-events:none;z-index:-1;
+/* Background */
+.bg-glow{
+ position:fixed;width:300px;height:300px;
+ border-radius:50%;filter:blur(110px);
+ opacity:.13;pointer-events:none;z-index:-1;
 }
-body:before{background:#163dff33;top:10%;left:-180px}
-body:after{background:#9016ff25;bottom:5%;right:-180px}
+.glow-one{background:#086dff;top:10%;left:-180px}
+.glow-two{background:#a000ff;bottom:5%;right:-180px}
 
 /* Header */
 header{
- position:fixed;top:0;width:100%;z-index:1000;
- background:#060a19eF;
- backdrop-filter:blur(16px);
- border-bottom:1px solid #24345c;
+ position:fixed;top:0;left:0;width:100%;
+ z-index:1000;background:rgba(7,11,24,.95);
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid #263454;
 }
 nav{
- height:76px;display:flex;align-items:center;
- justify-content:space-between;
+ min-height:72px;display:flex;
+ justify-content:space-between;align-items:center;
 }
-.logo{font-size:22px;font-weight:900;letter-spacing:1px}
-.logo b{color:var(--blue)}
-.nav-links{display:flex;align-items:center;gap:23px}
-.nav-links a{font-size:13px;font-weight:600;color:#dce5ff}
+.logo{font-size:21px;font-weight:900;letter-spacing:.5px}
+.logo span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{font-size:13px;font-weight:600;color:#d9e2f5}
 .nav-links a:hover{color:var(--blue)}
 .hire{
- background:linear-gradient(90deg,#08baff,#9135ff);
- padding:12px 20px;border-radius:30px;color:white!important;
+ background:linear-gradient(100deg,#13baff,#873dff);
+ padding:12px 18px;border-radius:30px;
+ color:white!important;
 }
-.menu{display:none;font-size:28px;cursor:pointer}
+.menu-btn{
+ display:none;background:none;border:0;
+ color:white;font-size:27px;cursor:pointer;
+}
 
 /* Hero */
 .hero{
- min-height:740px;display:flex;align-items:center;
- position:relative;padding-top:100px;overflow:hidden;
+ min-height:720px;
+ display:flex;align-items:center;
+ padding:120px 0 70px;
+ position:relative;overflow:hidden;
 }
-.hero-content{max-width:850px;position:relative;z-index:2}
-.eyebrow{
- display:inline-block;color:#55d4ff;
- border:1px solid #2585c9;padding:10px 18px;
- border-radius:30px;font-size:12px;
- letter-spacing:2px;margin-bottom:30px;
+.hero-content{max-width:750px;position:relative;z-index:2}
+.tag{
+ display:inline-block;padding:10px 16px;
+ border:1px solid #24639a;border-radius:30px;
+ color:#50caff;font-size:11px;
+ font-weight:700;letter-spacing:2px;
+ margin-bottom:25px;
 }
-.hero h1{font-size:76px;line-height:1.12;font-weight:900}
-.hero h2{font-size:27px;margin:24px 0}
-.hero p{
- color:var(--muted);font-size:17px;
- max-width:650px;line-height:1.9;
+.hero h1{
+ font-size:clamp(43px,8vw,78px);
+ font-weight:900;line-height:1.12;
 }
-.typing{color:#40c9ff}
-.cursor{animation:blink .7s infinite}
-@keyframes blink{50%{opacity:0}}
-.buttons{display:flex;gap:15px;flex-wrap:wrap;margin-top:32px}
+.hero h2{font-size:clamp(19px,3vw,27px);margin-top:23px}
+.typing{color:#37c5ff}
+.hero-description{
+ color:var(--muted);font-size:16px;
+ line-height:1.9;margin-top:20px;
+ max-width:620px;
+}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
 .btn{
- display:inline-block;padding:15px 25px;
- border-radius:30px;font-weight:700;transition:.3s;
+ display:inline-flex;align-items:center;justify-content:center;
+ padding:15px 23px;border-radius:30px;
+ font-weight:700;font-size:14px;
+ transition:.3s;
 }
 .btn-primary{
- background:linear-gradient(100deg,#08baff,#9536ff);
- box-shadow:0 0 25px #573aff55;
+ background:linear-gradient(100deg,#08baff,#923eff);
+ box-shadow:0 8px 30px #4d44ff35;
 }
-.btn-outline{border:1px solid var(--blue)}
-.btn:hover{transform:translateY(-5px);box-shadow:0 10px 30px #2266ff44}
-.hero-decoration{
- position:absolute;right:0;top:22%;
- width:350px;height:350px;border:1px solid #3e5dff55;
- border-radius:50%;animation:rotate 20s linear infinite;
+.btn-outline{border:1px solid #23baff}
+.btn:hover{transform:translateY(-4px)}
+.hero-art{
+ position:absolute;right:3%;top:30%;
+ width:270px;height:270px;
+ border:1px solid #4c55a0;
+ border-radius:50%;
+ display:grid;place-items:center;
+ animation:float 5s ease-in-out infinite;
 }
-.hero-decoration:before,.hero-decoration:after{
- content:"";position:absolute;border:1px solid #943fff55;
+.hero-art:before,.hero-art:after{
+ content:"";position:absolute;border:1px solid #6440a7;
  border-radius:50%;
 }
-.hero-decoration:before{inset:35px}
-.hero-decoration:after{inset:75px}
-.code-symbol{
- position:absolute;right:10%;top:40%;
- font-size:100px;font-weight:900;
- color:#28baff;opacity:.55;
- text-shadow:0 0 40px #177dff;
+.hero-art:before{inset:25px}
+.hero-art:after{inset:55px}
+.hero-art span{
+ font-size:80px;color:#22baff;
+ text-shadow:0 0 35px #168bff;
 }
-@keyframes rotate{to{transform:rotate(360deg)}}
-.scroll-text{margin-top:65px;color:#6c85b1;font-size:12px;letter-spacing:3px}
+@keyframes float{
+ 50%{transform:translateY(-15px)}
+}
 
 /* Stats */
 .stats{
  display:grid;grid-template-columns:repeat(4,1fr);
- background:linear-gradient(110deg,#0d2046,#1a1043);
- border:1px solid #263f7d;border-radius:20px;
- padding:30px 12px;text-align:center;
+ gap:15px;padding:25px;
+ background:#111d37;border:1px solid #293f6e;
+ border-radius:18px;
 }
-.stat h3{font-size:34px;color:#35caff}
+.stat{text-align:center}
+.stat h3{font-size:32px;color:#36c5ff}
 .stat p{font-size:12px;color:var(--muted);margin-top:8px}
 
 /* About */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
-.about-box,.skill-box{
- background:var(--card);border:1px solid #253c70;
- border-radius:18px;padding:32px;
+.about-grid{
+ display:grid;grid-template-columns:1fr 1fr;gap:25px;
 }
-.about-box h3{font-size:27px;margin-bottom:20px}
-.about-box p{color:var(--muted);line-height:1.9;font-size:14px}
-.skills{display:grid;grid-template-columns:1fr 1fr;gap:17px}
-.skill{margin-bottom:10px}
-.skill-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:9px}
-.bar{height:7px;background:#26334e;border-radius:20px;overflow:hidden}
-.bar span{
- display:block;height:100%;
- background:linear-gradient(90deg,#0cbcff,#943aff);
- border-radius:20px;animation:load 1.8s ease;
+.panel{
+ background:var(--surface);border:1px solid #263c66;
+ border-radius:18px;padding:30px;
 }
-@keyframes load{from{width:0}}
+.panel h3{font-size:23px;margin-bottom:18px}
+.panel p{font-size:14px;line-height:1.9;color:var(--muted)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.skill-name{display:flex;justify-content:space-between;font-size:12px;margin-bottom:9px}
+.track{height:7px;background:#27354e;border-radius:10px;overflow:hidden}
+.track span{
+ display:block;height:100%;border-radius:10px;
+ background:linear-gradient(90deg,#12baff,#9c42ff);
+}
 
 /* Services */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service{
- background:var(--card);padding:28px;
- border:1px solid #263b6a;border-radius:17px;
- transition:.3s;
+.services-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
 }
-.service:hover{transform:translateY(-8px);border-color:var(--blue)}
+.service{
+ background:var(--surface);border:1px solid #263c66;
+ border-radius:17px;padding:27px;transition:.3s;
+}
+.service:hover,.project:hover,.review:hover{
+ transform:translateY(-7px);border-color:#22baff;
+}
 .service-icon{font-size:35px;margin-bottom:17px}
-.service h3{font-size:18px;margin-bottom:12px}
-.service p{color:var(--muted);font-size:13px;line-height:1.8}
+.service h3{font-size:17px;margin-bottom:12px}
+.service p{font-size:13px;line-height:1.8;color:var(--muted)}
 
 /* Projects */
 .filters{
- display:flex;justify-content:center;gap:10px;
- flex-wrap:wrap;margin-bottom:30px;
+ display:flex;justify-content:center;gap:9px;
+ flex-wrap:wrap;margin-bottom:27px;
 }
 .filter{
- padding:10px 18px;border-radius:30px;
- color:white;background:#111d3b;
- border:1px solid #30466f;cursor:pointer;
+ background:#111d37;color:white;
+ border:1px solid #31466c;
+ border-radius:25px;padding:10px 17px;
+ cursor:pointer;font-size:12px;
 }
-.filter.active{background:linear-gradient(90deg,#08baff,#9234ff)}
-.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.filter.active{background:linear-gradient(90deg,#0bbaff,#923eff)}
+.projects-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
 .project{
- overflow:hidden;background:var(--card);
- border:1px solid #253c70;border-radius:16px;
- transition:.35s;
+ background:var(--surface);border:1px solid #263c66;
+ border-radius:16px;overflow:hidden;transition:.3s;
 }
-.project:hover{transform:translateY(-8px);border-color:#31caff}
-.project img{width:100%;height:180px;object-fit:cover;display:block}
-.project-info{padding:20px}
-.project-info h3{font-size:17px;margin-bottom:9px}
-.project-info p{font-size:13px;color:var(--muted);line-height:1.7}
-.project-info small{color:#43caff;display:block;margin-top:12px}
+.project img{width:100%;height:190px;object-fit:cover;display:block}
+.project-info{padding:19px}
+.project-info h3{font-size:16px;margin-bottom:9px}
+.project-info p{font-size:12px;line-height:1.7;color:var(--muted)}
+.project-info span{display:block;color:#35c6ff;font-size:11px;margin-top:13px}
 
 /* Reviews */
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
-.review{
- background:var(--card);padding:24px;
- border:1px solid #273d70;border-radius:17px;
- transition:.3s;
+.reviews-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
 }
-.review:hover{transform:translateY(-5px);border-color:#30baff}
-.stars{color:#ffc83d;letter-spacing:3px;margin-bottom:16px}
-.review p{font-size:13px;color:var(--muted);line-height:1.9}
-.review h4{margin-top:18px;font-size:14px}
-.review small{color:#48caff;font-size:11px}
+.review{
+ background:var(--surface);border:1px solid #263c66;
+ border-radius:16px;padding:23px;transition:.3s;
+}
+.stars{color:#ffcc43;letter-spacing:3px;margin-bottom:13px}
+.review p{font-size:13px;line-height:1.8;color:var(--muted)}
+.review h4{font-size:14px;margin-top:18px}
+.review small{font-size:10px;color:#42c8ff}
 
 /* Contact */
 .contact-box{
- padding:55px 25px;text-align:center;
- border-radius:22px;
- background:linear-gradient(110deg,#0c2858,#29104b);
- border:1px solid #3755a0;
+ text-align:center;padding:55px 25px;
+ background:linear-gradient(120deg,#102956,#281346);
+ border:1px solid #3b4e8c;border-radius:22px;
 }
-.contact-box h2{font-size:36px;margin-bottom:15px}
-.contact-box p{color:var(--muted);margin-bottom:28px;line-height:1.8}
-.contact-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.contact-box h2{font-size:clamp(27px,5vw,40px)}
+.contact-box p{color:var(--muted);font-size:14px;line-height:1.8;margin:17px auto 25px}
+.contact-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
 
 /* Footer */
-footer{border-top:1px solid #25365b;padding:35px 0;text-align:center}
+footer{padding:35px 0;border-top:1px solid #263454;text-align:center}
 footer p{color:var(--muted);font-size:12px;margin-top:12px}
-.social{display:flex;justify-content:center;gap:25px;margin:22px}
+.social{display:flex;justify-content:center;gap:22px;margin:20px}
 .social a{color:#45caff;font-size:13px}
-.whatsapp{
- position:fixed;bottom:22px;right:20px;z-index:900;
- padding:15px 21px;background:#0acb70;
- border-radius:35px;color:white;font-weight:800;
- box-shadow:0 0 25px #0acb7055;
+
+/* Reveal: content stays visible even if JS is unavailable */
+.reveal{opacity:1;transform:none}
+@media(prefers-reduced-motion:no-preference){
+ .reveal{animation:appear .65s ease both}
+ @keyframes appear{from{transform:translateY(18px);opacity:.3}to{transform:translateY(0);opacity:1}}
 }
 
-/* Animation */
-.reveal{opacity:0;transform:translateY(30px);transition:.8s}
-.reveal.show{opacity:1;transform:translateY(0)}
+.whatsapp{
+ position:fixed;bottom:18px;right:18px;
+ background:#0acb70;color:white;
+ border-radius:30px;padding:14px 20px;
+ font-weight:800;font-size:13px;
+ z-index:900;box-shadow:0 5px 25px #00c87544;
+}
 
+/* Tablet */
 @media(max-width:850px){
- .menu{display:block}
+ .menu-btn{display:block}
  .nav-links{
- display:none;position:absolute;top:76px;left:0;width:100%;
- background:#09122b;padding:25px;flex-direction:column;
- border-bottom:1px solid #253b70;
+ display:none;position:absolute;top:72px;left:0;
+ width:100%;padding:22px;
+ background:#0b1328;
+ border-bottom:1px solid #263454;
+ flex-direction:column;align-items:stretch;gap:19px;
  }
  .nav-links.open{display:flex}
- .hero h1{font-size:58px}
- .hero-decoration{right:-150px}
- .stats{grid-template-columns:repeat(2,1fr);gap:25px}
+ .nav-links a{text-align:center;padding:7px}
+ .hero-art{right:-100px;opacity:.4}
  .about-grid{grid-template-columns:1fr}
  .services-grid,.projects-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* Mobile */
 @media(max-width:550px){
+ .container{width:91%}
  section{padding:65px 0}
- .hero{min-height:680px}
- .hero h1{font-size:46px}
- .hero h2{font-size:22px}
- .hero p{font-size:14px}
- .hero-decoration{width:220px;height:220px;top:45%;right:-100px}
- .code-symbol{font-size:65px;right:8%;top:54%}
- .section-title{font-size:30px}
+ nav{min-height:65px}
+ .logo{font-size:18px}
+ .nav-links{top:65px}
+ .hero{min-height:650px;padding:110px 0 55px}
+ .hero-content{width:100%}
+ .hero h1{font-size:45px}
+ .hero h2{font-size:19px}
+ .hero-description{font-size:14px}
+ .hero-art{width:180px;height:180px;top:auto;bottom:20px;right:-80px;opacity:.24}
+ .hero-art span{font-size:55px}
+ .buttons{gap:10px}
+ .btn{padding:14px 18px;font-size:12px}
+ .stats{grid-template-columns:repeat(2,1fr);gap:25px;padding:23px 10px}
+ .stat h3{font-size:27px}
+ .about-grid{grid-template-columns:1fr}
+ .panel{padding:22px}
+ .skills{gap:14px}
  .services-grid,.projects-grid,.reviews-grid{grid-template-columns:1fr}
- .about-box,.skill-box{padding:23px}
- .contact-box h2{font-size:28px}
+ .project img{height:210px}
+ .section-heading{margin-bottom:30px}
+ .contact-box{padding:40px 17px}
+ .whatsapp{bottom:13px;right:12px;padding:12px 16px}
 }
 </style>
 </head>
 
 <body>
 
+<div class="bg-glow glow-one"></div>
+<div class="bg-glow glow-two"></div>
+
 <header>
 <nav class="container">
- <a href="#home" class="logo"><b>W</b> WAZIR DEVELOPER</a>
- <div class="menu" onclick="toggleMenu()">☰</div>
+ <a class="logo" href="#home"><span>W</span> WAZIR DEVELOPER</a>
+ <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
  <div class="nav-links" id="navLinks">
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -266,66 +312,64 @@ footer p{color:var(--muted);font-size:12px;margin-top:12px}
   <a href="#projects">Projects</a>
   <a href="#reviews">Reviews</a>
   <a href="#contact">Contact</a>
-  <a class="hire" href="mailto:shahidwazir33343@gmail.com">Hire Me ↗</a>
+  <a class="hire" href="#contact">Hire Me ↗</a>
  </div>
 </nav>
 </header>
 
-<main>
-
 <!-- HERO -->
 <section class="hero" id="home">
 <div class="container">
- <div class="hero-content reveal">
-  <span class="eyebrow">WELCOME TO MY DIGITAL WORLD</span>
-  <h1>Creative Ideas.<br><span class="gradient">Digital Reality.</span></h1>
-  <h2>I'm Shahid Wazir</h2>
-  <h2 style="font-size:23px">I'm a <span class="typing" id="typing"></span><span class="cursor">|</span></h2>
-  <p>I create modern websites, mobile applications and intelligent digital solutions. Let's transform your ideas into something extraordinary.</p>
+ <div class="hero-content">
+  <span class="tag">WELCOME TO MY PORTFOLIO</span>
+  <h1>Building The<br><span class="gradient">Digital Future.</span></h1>
+  <h2>Hello, I'm Shahid Wazir</h2>
+  <h2>I'm a <span class="typing" id="typing">Web Developer</span></h2>
+  <p class="hero-description">
+   I create modern websites, mobile applications and intelligent digital experiences. Let's turn your ideas into something amazing.
+  </p>
   <div class="buttons">
-   <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
-   <a href="#contact" class="btn btn-outline">Let's Talk</a>
+   <a href="#projects" class="btn btn-primary">Explore Projects ↗</a>
+   <a href="#contact" class="btn btn-outline">Contact Me</a>
   </div>
-  <div class="scroll-text">SCROLL TO EXPLORE ↓</div>
  </div>
 </div>
-<div class="hero-decoration"></div>
-<div class="code-symbol">&lt;/&gt;</div>
+<div class="hero-art"><span>&lt;/&gt;</span></div>
 </section>
 
 <!-- STATS -->
 <div class="container">
-<div class="stats reveal">
+<div class="stats">
  <div class="stat"><h3>12+</h3><p>Project Concepts</p></div>
- <div class="stat"><h3>8+</h3><p>Technical Skills</p></div>
- <div class="stat"><h3>6</h3><p>Digital Services</p></div>
- <div class="stat"><h3>24/7</h3><p>Contact Availability</p></div>
+ <div class="stat"><h3>6+</h3><p>Services</p></div>
+ <div class="stat"><h3>8+</h3><p>Technologies</p></div>
+ <div class="stat"><h3>24/7</h3><p>Contact Support</p></div>
 </div>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
 <div class="container">
- <h2 class="section-title">About <span class="gradient">Me</span></h2>
- <p class="section-sub">A little introduction about my work and passion</p>
+ <div class="section-heading">
+  <h2>About <span class="gradient">Me</span></h2>
+  <p>Discover my passion for technology and creativity.</p>
+ </div>
  <div class="about-grid">
-  <div class="about-box reveal">
-   <h3>I'm Shahid <span class="gradient">Wazir</span></h3>
-   <p>I'm a passionate web developer and app developer who loves creating beautiful and useful digital experiences.</p>
-   <br>
-   <p>I focus on modern designs, responsive layouts, user-friendly interfaces and innovative technology. My mission is to help businesses build a strong online presence.</p>
-   <br>
-   <a href="#contact" class="btn btn-primary">Work With Me ↗</a>
+  <div class="panel">
+   <h3>Who Am I?</h3>
+   <p>I'm Shahid Wazir, a web developer and app developer passionate about building modern digital experiences.</p><br>
+   <p>I enjoy creating beautiful interfaces, responsive websites and innovative technology solutions for businesses and individuals.</p>
+   <br><a href="#contact" class="btn btn-primary">Let's Work Together ↗</a>
   </div>
-  <div class="skill-box reveal">
-   <h3 style="margin-bottom:25px">My Technical Skills</h3>
+  <div class="panel">
+   <h3>My Skills</h3>
    <div class="skills">
-    <div class="skill"><div class="skill-top"><b>HTML</b><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
-    <div class="skill"><div class="skill-top"><b>CSS</b><span>85%</span></div><div class="bar"><span style="width:85%"></span></div></div>
-    <div class="skill"><div class="skill-top"><b>JavaScript</b><span>75%</span></div><div class="bar"><span style="width:75%"></span></div></div>
-    <div class="skill"><div class="skill-top"><b>Python</b><span>75%</span></div><div class="bar"><span style="width:75%"></span></div></div>
-    <div class="skill"><div class="skill-top"><b>React</b><span>70%</span></div><div class="bar"><span style="width:70%"></span></div></div>
-    <div class="skill"><div class="skill-top"><b>AI Tools</b><span>80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
+    <div><div class="skill-name"><b>HTML</b><span>90%</span></div><div class="track"><span style="width:90%"></span></div></div>
+    <div><div class="skill-name"><b>CSS</b><span>85%</span></div><div class="track"><span style="width:85%"></span></div></div>
+    <div><div class="skill-name"><b>JavaScript</b><span>75%</span></div><div class="track"><span style="width:75%"></span></div></div>
+    <div><div class="skill-name"><b>Python</b><span>75%</span></div><div class="track"><span style="width:75%"></span></div></div>
+    <div><div class="skill-name"><b>React</b><span>70%</span></div><div class="track"><span style="width:70%"></span></div></div>
+    <div><div class="skill-name"><b>AI Tools</b><span>80%</span></div><div class="track"><span style="width:80%"></span></div></div>
    </div>
   </div>
  </div>
@@ -335,15 +379,17 @@ footer p{color:var(--muted);font-size:12px;margin-top:12px}
 <!-- SERVICES -->
 <section id="services">
 <div class="container">
- <h2 class="section-title">My <span class="gradient">Services</span></h2>
- <p class="section-sub">Professional digital solutions for your business</p>
+ <div class="section-heading">
+  <h2>My <span class="gradient">Services</span></h2>
+  <p>Creative digital solutions for your business.</p>
+ </div>
  <div class="services-grid">
-  <div class="service reveal"><div class="service-icon">🌐</div><h3>Website Development</h3><p>Modern, responsive and professional websites for businesses.</p></div>
-  <div class="service reveal"><div class="service-icon">📱</div><h3>App Development</h3><p>Mobile app interfaces and application development.</p></div>
-  <div class="service reveal"><div class="service-icon">🤖</div><h3>AI Solutions</h3><p>AI assistants, chatbots and smart automation solutions.</p></div>
-  <div class="service reveal"><div class="service-icon">🛒</div><h3>E-Commerce</h3><p>Online shopping stores and digital business solutions.</p></div>
-  <div class="service reveal"><div class="service-icon">🎨</div><h3>UI/UX Design</h3><p>Creative and user-friendly website interfaces.</p></div>
-  <div class="service reveal"><div class="service-icon">⚙️</div><h3>Website Maintenance</h3><p>Website updates, improvements and technical support.</p></div>
+  <div class="service"><div class="service-icon">🌐</div><h3>Website Development</h3><p>Responsive and professional websites for businesses.</p></div>
+  <div class="service"><div class="service-icon">📱</div><h3>App Development</h3><p>Modern mobile application design and development.</p></div>
+  <div class="service"><div class="service-icon">🤖</div><h3>AI Development</h3><p>AI assistants, chatbots and intelligent solutions.</p></div>
+  <div class="service"><div class="service-icon">🛒</div><h3>E-Commerce</h3><p>Online stores and shopping experiences.</p></div>
+  <div class="service"><div class="service-icon">🎨</div><h3>UI/UX Design</h3><p>Beautiful and easy-to-use digital interfaces.</p></div>
+  <div class="service"><div class="service-icon">⚙️</div><h3>Website Maintenance</h3><p>Website updates, improvements and support.</p></div>
  </div>
 </div>
 </section>
@@ -351,39 +397,41 @@ footer p{color:var(--muted);font-size:12px;margin-top:12px}
 <!-- PROJECTS -->
 <section id="projects">
 <div class="container">
- <h2 class="section-title">Featured <span class="gradient">Projects</span></h2>
- <p class="section-sub">Website and application concepts in my portfolio</p>
- <div class="filters">
-  <button class="filter active" onclick="filterProjects('all',this)">All</button>
-  <button class="filter" onclick="filterProjects('web',this)">Websites</button>
-  <button class="filter" onclick="filterProjects('app',this)">Apps</button>
-  <button class="filter" onclick="filterProjects('ai',this)">AI</button>
+ <div class="section-heading">
+  <h2>Featured <span class="gradient">Projects</span></h2>
+  <p>Explore my website and application concepts.</p>
  </div>
- <div class="projects-grid" id="projectGrid">
+ <div class="filters">
+  <button class="filter active" data-filter="all">All</button>
+  <button class="filter" data-filter="web">Websites</button>
+  <button class="filter" data-filter="app">Apps</button>
+  <button class="filter" data-filter="ai">AI</button>
+ </div>
+ <div class="projects-grid">
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700" alt="Restaurant"><div class="project-info"><h3>Restaurant Website</h3><p>Modern restaurant and food ordering design.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700" alt="Restaurant"><div class="project-info"><h3>Restaurant Website</h3><p>Restaurant website and online food ordering concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700" alt="Shopping"><div class="project-info"><h3>E-Commerce Store</h3><p>Online shopping and product showcase.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700" alt="Shopping"><div class="project-info"><h3>E-Commerce Store</h3><p>Modern online shopping store concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700" alt="Portfolio"><div class="project-info"><h3>Creative Portfolio</h3><p>Personal portfolio and professional branding.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab8272f3f?w=700" alt="Portfolio"><div class="project-info"><h3>Business Portfolio</h3><p>Creative professional portfolio website.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=700" alt="Hospital"><div class="project-info"><h3>Hospital Website</h3><p>Healthcare and appointment website concept.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700" alt="Healthcare"><div class="project-info"><h3>Healthcare Website</h3><p>Hospital and appointment website concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700" alt="Education"><div class="project-info"><h3>Education Website</h3><p>School and educational management concept.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700" alt="Education"><div class="project-info"><h3>Education Platform</h3><p>Online education and school website concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700" alt="Travel"><div class="project-info"><h3>Travel Website</h3><p>Travel destinations and booking concept.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700" alt="Travel"><div class="project-info"><h3>Travel Website</h3><p>Travel and tourism website concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700" alt="Property"><div class="project-info"><h3>Real Estate Website</h3><p>Property listings and real estate design.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700" alt="Real Estate"><div class="project-info"><h3>Real Estate Website</h3><p>Property listing and real estate concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=700" alt="Blog"><div class="project-info"><h3>Blog Website</h3><p>Modern publishing and blogging platform.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=700" alt="Blog"><div class="project-info"><h3>Creative Blog</h3><p>Modern blogging and publishing concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700" alt="Fitness"><div class="project-info"><h3>Fitness Website</h3><p>Gym and fitness business website concept.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700" alt="Gym"><div class="project-info"><h3>Fitness Website</h3><p>Gym and fitness business website concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700" alt="Corporate"><div class="project-info"><h3>Corporate Website</h3><p>Professional company website concept.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="web"><img loading="lazy" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700" alt="Corporate"><div class="project-info"><h3>Corporate Website</h3><p>Professional company website concept.</p><span>Website Concept</span></div></article>
 
-  <article class="project reveal" data-type="ai"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700" alt="AI"><div class="project-info"><h3>AI Assistant</h3><p>AI assistant and chatbot interface concept.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="ai"><img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700" alt="AI"><div class="project-info"><h3>AI Assistant</h3><p>Artificial intelligence assistant interface concept.</p><span>AI Concept</span></div></article>
 
-  <article class="project reveal" data-type="app"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700" alt="Mobile App"><div class="project-info"><h3>Mobile App Design</h3><p>Modern mobile application interface concept.</p><small>Concept Showcase</small></div></article>
+  <article class="project" data-type="app"><img loading="lazy" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700" alt="Mobile App"><div class="project-info"><h3>Mobile Application</h3><p>Modern mobile application UI concept.</p><span>App Concept</span></div></article>
 
  </div>
 </div>
@@ -392,36 +440,32 @@ footer p{color:var(--muted);font-size:12px;margin-top:12px}
 <!-- REVIEWS -->
 <section id="reviews">
 <div class="container">
- <h2 class="section-title">Client <span class="gradient">Testimonials</span></h2>
- <p class="section-sub">Sample testimonial layouts — replace with genuine client feedback</p>
+ <div class="section-heading">
+  <h2>Client <span class="gradient">Reviews</span></h2>
+  <p>Sample testimonial designs. Genuine client reviews will be added here.</p>
+ </div>
  <div class="reviews-grid">
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"The website design looks clean, modern and easy to navigate. The overall presentation is impressive."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"Communication and understanding of the project requirements are very important. This is the kind of experience I appreciate."</p><h4>Business Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"A professional-looking design with a great focus on mobile responsiveness and user experience."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"The attention to detail in the layout and colors makes the website feel polished and attractive."</p><h4>Project Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"A clear design approach and an organized layout make the digital experience much better."</p><h4>Business Owner</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"I like the modern style, simple navigation and professional presentation of the website."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"The design feels modern and the different sections are arranged in a very clear way."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"A responsive-first approach is essential for today's businesses. This design demonstrates that focus."</p><h4>Online Business</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"The color combination and typography create a strong professional impression."</p><h4>Project Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"I appreciate the creative ideas and attention to the overall website experience."</p><h4>Business Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"The layout is easy to understand, and the website presents its information beautifully."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
-
-  <div class="review reveal"><div class="stars">★★★★★</div><p>"A stylish digital presentation with a modern feel and a clean user interface."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
-
+  <div class="review"><div class="stars">★★★★★</div><p>"A clean and modern design with a professional presentation."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"The layout is attractive and easy to navigate."</p><h4>Business Owner</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"I appreciate the creative approach and attention to detail."</p><h4>Project Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"A modern design that looks great on mobile screens."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"The website presentation feels polished and organized."</p><h4>Business Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"The color combination and typography look excellent."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"A simple, clear and user-friendly website experience."</p><h4>Project Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"The design has a great modern and professional feel."</p><h4>Business Owner</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"Creative ideas and a nice overall digital presentation."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"The interface is well structured and easy to understand."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"A responsive layout and attractive visual design."</p><h4>Project Client</h4><small>Sample testimonial</small></div>
+  <div class="review"><div class="stars">★★★★★</div><p>"A stylish and professional digital experience."</p><h4>Business Client</h4><small>Sample testimonial</small></div>
  </div>
 </div>
 </section>
 
-<!-- CONTA
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+ <div class="contact-box">
+  <h2>Let's Build Something <span class="gradient">Amazing!</span></h2>
+  <p>Have an idea or business project? Contact me and let's discuss how I can help.</p>
+  <div class="contact-actions">
+   <a class="btn btn-prima
