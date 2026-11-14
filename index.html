@@ -3,209 +3,252 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#070817">
-<meta name="description" content="Shahid Wazir - Web Developer, App Developer and AI Enthusiast.">
-<title>Shahid Wazir | Wazir Developer</title>
+<title>WAZIR DEVELOPER | Shahid Wazir</title>
+<meta name="description" content="Professional web development, app development and AI solutions by Shahid Wazir.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --bg:#070817;
-  --card:#11152b;
-  --blue:#168cff;
-  --purple:#a42cff;
-  --text:#f5f6ff;
-  --muted:#aab1ca;
+:root{
+ --bg:#060a19;
+ --card:#101a32;
+ --blue:#12baff;
+ --purple:#9333ff;
+ --white:#f5f7ff;
+ --muted:#a7b2ca;
 }
-* {margin:0;padding:0;box-sizing:border-box}
-html {scroll-behavior:smooth;scroll-padding-top:85px}
-body {
-  background:var(--bg);
-  color:var(--text);
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);color:var(--white);
+ font-family:Inter,Arial,sans-serif;
+ overflow-x:hidden;
 }
-a {text-decoration:none;color:inherit}
-.container {width:90%;max-width:1150px;margin:auto}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1180px;margin:auto}
+section{padding:90px 0}
+.gradient{
+ background:linear-gradient(90deg,#08c4ff,#a13cff);
+ -webkit-background-clip:text;
+ color:transparent;
+}
+.section-title{text-align:center;font-size:38px;font-weight:900}
+.section-sub{text-align:center;color:var(--muted);margin:13px 0 42px;line-height:1.7}
 
-/* NAVBAR */
-header {
-  position:sticky;top:0;z-index:100;
-  background:rgba(7,8,23,.94);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid #24284a;
+/* Background effects */
+body:before,body:after{
+ content:"";position:fixed;width:350px;height:350px;
+ border-radius:50%;filter:blur(120px);
+ pointer-events:none;z-index:-1;
 }
-nav {
-  min-height:75px;
-  display:flex;justify-content:space-between;
-  align-items:center;gap:20px;
+body:before{background:#163dff33;top:10%;left:-180px}
+body:after{background:#9016ff25;bottom:5%;right:-180px}
+
+/* Header */
+header{
+ position:fixed;top:0;width:100%;z-index:1000;
+ background:#060a19eF;
+ backdrop-filter:blur(16px);
+ border-bottom:1px solid #24345c;
 }
-.logo {font-size:24px;font-weight:900;letter-spacing:1px}
-.logo span {color:var(--blue)}
-.nav-links {display:flex;align-items:center;gap:24px}
-.nav-links a {font-size:14px;color:#ddd}
-.nav-links a:hover {color:var(--blue)}
-.menu-btn {
-  display:none;background:none;border:0;
-  color:white;font-size:27px;cursor:pointer;
+nav{
+ height:76px;display:flex;align-items:center;
+ justify-content:space-between;
+}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}
+.logo b{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:23px}
+.nav-links a{font-size:13px;font-weight:600;color:#dce5ff}
+.nav-links a:hover{color:var(--blue)}
+.hire{
+ background:linear-gradient(90deg,#08baff,#9135ff);
+ padding:12px 20px;border-radius:30px;color:white!important;
+}
+.menu{display:none;font-size:28px;cursor:pointer}
+
+/* Hero */
+.hero{
+ min-height:740px;display:flex;align-items:center;
+ position:relative;padding-top:100px;overflow:hidden;
+}
+.hero-content{max-width:850px;position:relative;z-index:2}
+.eyebrow{
+ display:inline-block;color:#55d4ff;
+ border:1px solid #2585c9;padding:10px 18px;
+ border-radius:30px;font-size:12px;
+ letter-spacing:2px;margin-bottom:30px;
+}
+.hero h1{font-size:76px;line-height:1.12;font-weight:900}
+.hero h2{font-size:27px;margin:24px 0}
+.hero p{
+ color:var(--muted);font-size:17px;
+ max-width:650px;line-height:1.9;
+}
+.typing{color:#40c9ff}
+.cursor{animation:blink .7s infinite}
+@keyframes blink{50%{opacity:0}}
+.buttons{display:flex;gap:15px;flex-wrap:wrap;margin-top:32px}
+.btn{
+ display:inline-block;padding:15px 25px;
+ border-radius:30px;font-weight:700;transition:.3s;
+}
+.btn-primary{
+ background:linear-gradient(100deg,#08baff,#9536ff);
+ box-shadow:0 0 25px #573aff55;
+}
+.btn-outline{border:1px solid var(--blue)}
+.btn:hover{transform:translateY(-5px);box-shadow:0 10px 30px #2266ff44}
+.hero-decoration{
+ position:absolute;right:0;top:22%;
+ width:350px;height:350px;border:1px solid #3e5dff55;
+ border-radius:50%;animation:rotate 20s linear infinite;
+}
+.hero-decoration:before,.hero-decoration:after{
+ content:"";position:absolute;border:1px solid #943fff55;
+ border-radius:50%;
+}
+.hero-decoration:before{inset:35px}
+.hero-decoration:after{inset:75px}
+.code-symbol{
+ position:absolute;right:10%;top:40%;
+ font-size:100px;font-weight:900;
+ color:#28baff;opacity:.55;
+ text-shadow:0 0 40px #177dff;
+}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.scroll-text{margin-top:65px;color:#6c85b1;font-size:12px;letter-spacing:3px}
+
+/* Stats */
+.stats{
+ display:grid;grid-template-columns:repeat(4,1fr);
+ background:linear-gradient(110deg,#0d2046,#1a1043);
+ border:1px solid #263f7d;border-radius:20px;
+ padding:30px 12px;text-align:center;
+}
+.stat h3{font-size:34px;color:#35caff}
+.stat p{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.about-box,.skill-box{
+ background:var(--card);border:1px solid #253c70;
+ border-radius:18px;padding:32px;
+}
+.about-box h3{font-size:27px;margin-bottom:20px}
+.about-box p{color:var(--muted);line-height:1.9;font-size:14px}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.skill{margin-bottom:10px}
+.skill-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:9px}
+.bar{height:7px;background:#26334e;border-radius:20px;overflow:hidden}
+.bar span{
+ display:block;height:100%;
+ background:linear-gradient(90deg,#0cbcff,#943aff);
+ border-radius:20px;animation:load 1.8s ease;
+}
+@keyframes load{from{width:0}}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{
+ background:var(--card);padding:28px;
+ border:1px solid #263b6a;border-radius:17px;
+ transition:.3s;
+}
+.service:hover{transform:translateY(-8px);border-color:var(--blue)}
+.service-icon{font-size:35px;margin-bottom:17px}
+.service h3{font-size:18px;margin-bottom:12px}
+.service p{color:var(--muted);font-size:13px;line-height:1.8}
+
+/* Projects */
+.filters{
+ display:flex;justify-content:center;gap:10px;
+ flex-wrap:wrap;margin-bottom:30px;
+}
+.filter{
+ padding:10px 18px;border-radius:30px;
+ color:white;background:#111d3b;
+ border:1px solid #30466f;cursor:pointer;
+}
+.filter.active{background:linear-gradient(90deg,#08baff,#9234ff)}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.project{
+ overflow:hidden;background:var(--card);
+ border:1px solid #253c70;border-radius:16px;
+ transition:.35s;
+}
+.project:hover{transform:translateY(-8px);border-color:#31caff}
+.project img{width:100%;height:180px;object-fit:cover;display:block}
+.project-info{padding:20px}
+.project-info h3{font-size:17px;margin-bottom:9px}
+.project-info p{font-size:13px;color:var(--muted);line-height:1.7}
+.project-info small{color:#43caff;display:block;margin-top:12px}
+
+/* Reviews */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.review{
+ background:var(--card);padding:24px;
+ border:1px solid #273d70;border-radius:17px;
+ transition:.3s;
+}
+.review:hover{transform:translateY(-5px);border-color:#30baff}
+.stars{color:#ffc83d;letter-spacing:3px;margin-bottom:16px}
+.review p{font-size:13px;color:var(--muted);line-height:1.9}
+.review h4{margin-top:18px;font-size:14px}
+.review small{color:#48caff;font-size:11px}
+
+/* Contact */
+.contact-box{
+ padding:55px 25px;text-align:center;
+ border-radius:22px;
+ background:linear-gradient(110deg,#0c2858,#29104b);
+ border:1px solid #3755a0;
+}
+.contact-box h2{font-size:36px;margin-bottom:15px}
+.contact-box p{color:var(--muted);margin-bottom:28px;line-height:1.8}
+.contact-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+
+/* Footer */
+footer{border-top:1px solid #25365b;padding:35px 0;text-align:center}
+footer p{color:var(--muted);font-size:12px;margin-top:12px}
+.social{display:flex;justify-content:center;gap:25px;margin:22px}
+.social a{color:#45caff;font-size:13px}
+.whatsapp{
+ position:fixed;bottom:22px;right:20px;z-index:900;
+ padding:15px 21px;background:#0acb70;
+ border-radius:35px;color:white;font-weight:800;
+ box-shadow:0 0 25px #0acb7055;
 }
 
-/* BUTTONS */
-.btn {
-  display:inline-block;
-  padding:13px 23px;
-  border-radius:30px;
-  background:linear-gradient(100deg,#145cff,#a52bff);
-  color:white;font-weight:bold;
-  transition:.3s;border:0;cursor:pointer;
-}
-.btn:hover {transform:translateY(-3px);box-shadow:0 0 22px #563cff}
-.btn-outline {
-  background:transparent;
-  border:1px solid var(--blue);
-}
+/* Animation */
+.reveal{opacity:0;transform:translateY(30px);transition:.8s}
+.reveal.show{opacity:1;transform:translateY(0)}
 
-/* HERO */
-.hero {
-  min-height:620px;
-  display:flex;align-items:center;
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(ellipse at 80% 45%,#24105a 0%,transparent 45%),
-    radial-gradient(ellipse at 15% 85%,#071f4a 0%,transparent 45%);
+@media(max-width:850px){
+ .menu{display:block}
+ .nav-links{
+ display:none;position:absolute;top:76px;left:0;width:100%;
+ background:#09122b;padding:25px;flex-direction:column;
+ border-bottom:1px solid #253b70;
+ }
+ .nav-links.open{display:flex}
+ .hero h1{font-size:58px}
+ .hero-decoration{right:-150px}
+ .stats{grid-template-columns:repeat(2,1fr);gap:25px}
+ .about-grid{grid-template-columns:1fr}
+ .services-grid,.projects-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
 }
-.hero-content {position:relative;z-index:2;max-width:760px}
-.eyebrow {
-  color:#56b4ff;font-weight:bold;
-  letter-spacing:3px;font-size:13px;
-}
-.hero h1 {
-  font-size:clamp(43px,8vw,76px);
-  line-height:1.12;margin:17px 0;
-}
-.gradient-text {
-  background:linear-gradient(90deg,#159cff,#c13bff);
-  background-clip:text;-webkit-background-clip:text;
-  color:transparent;
-}
-.hero h2 {font-size:clamp(19px,3vw,27px);color:#e0e3f4}
-.hero p {color:var(--muted);font-size:17px;margin:18px 0 28px;max-width:600px}
-.hero-buttons {display:flex;gap:13px;flex-wrap:wrap}
-.glow-circle {
-  position:absolute;width:350px;height:350px;
-  right:7%;top:23%;border-radius:50%;
-  border:1px solid #4c37d7;
-  box-shadow:0 0 70px #3811aa,inset 0 0 60px #1a1c85;
-  opacity:.5;
-}
-.hero-tag {
-  position:absolute;right:12%;top:42%;
-  font-size:75px;font-weight:900;
-  color:#1d91ff;opacity:.7;
-  text-shadow:0 0 35px #693dff;
-}
-
-/* SECTIONS */
-section {padding:85px 0}
-.section-title {
-  text-align:center;font-size:36px;
-  margin-bottom:38px;
-}
-.section-title span {color:#a34cff}
-.about-text {
-  max-width:800px;margin:auto;
-  text-align:center;color:var(--muted);font-size:17px;
-}
-.about-text strong {color:white}
-
-/* SKILLS */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:18px;
-}
-.card {
-  background:linear-gradient(145deg,#151a35,#0c1022);
-  border:1px solid #282e55;
-  padding:25px;border-radius:16px;
-  transition:.3s;
-}
-.card:hover {
-  transform:translateY(-6px);
-  border-color:#804aff;
-  box-shadow:0 10px 30px #34148a33;
-}
-.skill {text-align:center;font-weight:bold}
-.skill .symbol {font-size:29px;display:block;margin-bottom:10px}
-.skill p {color:var(--muted);font-size:13px}
-
-/* PROJECTS */
-.project-card h3 {color:#8cbaff;margin-bottom:10px}
-.project-card p {color:var(--muted);font-size:14px}
-.project-card .project-type {
-  display:inline-block;margin-top:15px;
-  color:#c6a2ff;font-size:12px;
-}
-.project-card .btn {margin-top:17px;font-size:13px;padding:9px 16px}
-.services-grid {grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.service-icon {font-size:34px;margin-bottom:10px}
-.service-card h3 {margin-bottom:8px;color:#8cbaff}
-.service-card p {color:var(--muted);font-size:14px}
-
-/* CONTACT */
-.contact-box {
-  max-width:750px;margin:auto;
-  text-align:center;
-  background:linear-gradient(140deg,#15183b,#111025);
-  border:1px solid #39306b;
-  border-radius:22px;padding:38px 22px;
-}
-.contact-box p {color:var(--muted);margin:12px 0 23px}
-.contact-links {
-  display:flex;justify-content:center;
-  gap:15px;flex-wrap:wrap;margin:20px 0;
-}
-.contact-link {
-  background:#1a2140;padding:12px 17px;
-  border-radius:10px;font-size:14px;
-  border:1px solid #343b65;
-}
-.contact-link:hover {border-color:var(--blue)}
-.email {word-break:break-word}
-
-/* FOOTER */
-footer {
-  padding:25px 0;text-align:center;
-  border-top:1px solid #272a4c;
-  color:#aab1ca;font-size:13px;
-}
-.whatsapp-float {
-  position:fixed;right:20px;bottom:20px;
-  z-index:99;background:#16c76a;
-  color:#fff;padding:14px 19px;
-  border-radius:40px;font-weight:bold;
-  box-shadow:0 0 20px #16c76a66;
-}
-
-/* MOBILE */
-@media(max-width:760px) {
-  .menu-btn {display:block}
-  .nav-links {
-    display:none;position:absolute;
-    top:75px;left:0;width:100%;
-    background:#0d1025;
-    padding:20px;flex-direction:column;
-    border-bottom:1px solid #333;
-  }
-  .nav-links.open {display:flex}
-  .nav-links a {font-size:16px}
-  .hero {min-height:550px}
-  .hero-tag {right:4%;top:70%;font-size:40px}
-  .glow-circle {right:-150px;top:48%}
-  .hero h1 {font-size:47px}
-  .section-title {font-size:29px}
-  section {padding:65px 0}
-  .whatsapp-float {right:12px;bottom:12px}
+@media(max-width:550px){
+ section{padding:65px 0}
+ .hero{min-height:680px}
+ .hero h1{font-size:46px}
+ .hero h2{font-size:22px}
+ .hero p{font-size:14px}
+ .hero-decoration{width:220px;height:220px;top:45%;right:-100px}
+ .code-symbol{font-size:65px;right:8%;top:54%}
+ .section-title{font-size:30px}
+ .services-grid,.projects-grid,.reviews-grid{grid-template-columns:1fr}
+ .about-box,.skill-box{padding:23px}
+ .contact-box h2{font-size:28px}
 }
 </style>
 </head>
@@ -213,273 +256,172 @@ footer {
 <body>
 
 <header>
-  <nav class="container">
-    <a href="#home" class="logo">
-      <span>W</span> WAZIR DEVELOPER
-    </a>
-
-    <button class="menu-btn" id="menuBtn"
-      aria-label="Open navigation" aria-expanded="false">☰</button>
-
-    <div class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="btn">Hire Me</a>
-    </div>
-  </nav>
+<nav class="container">
+ <a href="#home" class="logo"><b>W</b> WAZIR DEVELOPER</a>
+ <div class="menu" onclick="toggleMenu()">☰</div>
+ <div class="nav-links" id="navLinks">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a class="hire" href="mailto:shahidwazir33343@gmail.com">Hire Me ↗</a>
+ </div>
+</nav>
 </header>
 
 <main>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="container hero-content">
-    <div class="eyebrow">WELCOME TO MY PORTFOLIO</div>
-
-    <h1>
-      Hi, I'm<br>
-      <span class="gradient-text">Shahid Wazir</span>
-    </h1>
-
-    <h2>Web Developer & AI Enthusiast</h2>
-
-    <p>
-      I create modern, responsive websites and
-      powerful digital solutions for businesses.
-      Let's build something amazing together.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#projects" class="btn">View My Projects ↗</a>
-      <a href="#contact" class="btn btn-outline">Contact Me</a>
-    </div>
+<div class="container">
+ <div class="hero-content reveal">
+  <span class="eyebrow">WELCOME TO MY DIGITAL WORLD</span>
+  <h1>Creative Ideas.<br><span class="gradient">Digital Reality.</span></h1>
+  <h2>I'm Shahid Wazir</h2>
+  <h2 style="font-size:23px">I'm a <span class="typing" id="typing"></span><span class="cursor">|</span></h2>
+  <p>I create modern websites, mobile applications and intelligent digital solutions. Let's transform your ideas into something extraordinary.</p>
+  <div class="buttons">
+   <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
+   <a href="#contact" class="btn btn-outline">Let's Talk</a>
   </div>
-
-  <div class="glow-circle"></div>
-  <div class="hero-tag">&lt;/&gt;</div>
+  <div class="scroll-text">SCROLL TO EXPLORE ↓</div>
+ </div>
+</div>
+<div class="hero-decoration"></div>
+<div class="code-symbol">&lt;/&gt;</div>
 </section>
+
+<!-- STATS -->
+<div class="container">
+<div class="stats reveal">
+ <div class="stat"><h3>12+</h3><p>Project Concepts</p></div>
+ <div class="stat"><h3>8+</h3><p>Technical Skills</p></div>
+ <div class="stat"><h3>6</h3><p>Digital Services</p></div>
+ <div class="stat"><h3>24/7</h3><p>Contact Availability</p></div>
+</div>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="container">
-    <h2 class="section-title">About <span>Me</span></h2>
-
-    <p class="about-text">
-      Hello! I'm <strong>Shahid Wazir</strong>, a passionate
-      Web Developer and App Developer. I enjoy building
-      modern websites, mobile applications and AI projects.
-      My goal is to help businesses grow through technology
-      and creative digital solutions.
-    </p>
+<div class="container">
+ <h2 class="section-title">About <span class="gradient">Me</span></h2>
+ <p class="section-sub">A little introduction about my work and passion</p>
+ <div class="about-grid">
+  <div class="about-box reveal">
+   <h3>I'm Shahid <span class="gradient">Wazir</span></h3>
+   <p>I'm a passionate web developer and app developer who loves creating beautiful and useful digital experiences.</p>
+   <br>
+   <p>I focus on modern designs, responsive layouts, user-friendly interfaces and innovative technology. My mission is to help businesses build a strong online presence.</p>
+   <br>
+   <a href="#contact" class="btn btn-primary">Work With Me ↗</a>
   </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="container">
-    <h2 class="section-title">My <span>Skills</span></h2>
-
-    <div class="grid">
-      <div class="card skill">
-        <span class="symbol">🌐</span>
-        HTML5
-        <p>Website Structure</p>
-      </div>
-
-      <div class="card skill">
-        <span class="symbol">🎨</span>
-        CSS3
-        <p>Modern Website Design</p>
-      </div>
-
-      <div class="card skill">
-        <span class="symbol">⚡</span>
-        JavaScript
-        <p>Interactive Websites</p>
-      </div>
-
-      <div class="card skill">
-        <span class="symbol">🐍</span>
-        Python
-        <p>Backend Development</p>
-      </div>
-
-      <div class="card skill">
-        <span class="symbol">🚀</span>
-        FastAPI
-        <p>API Development</p>
-      </div>
-
-      <div class="card skill">
-        <span class="symbol">📱</span>
-        Android Development
-        <p>Mobile Applications</p>
-      </div>
-
-      <div class="card skill">
-        <span class="symbol">🤖</span>
-        AI Integration
-        <p>AI-Powered Projects</p>
-      </div>
-
-      <div class="card skill">
-        <span class="symbol">💻</span>
-        Responsive Design
-        <p>Mobile & Desktop</p>
-      </div>
-    </div>
+  <div class="skill-box reveal">
+   <h3 style="margin-bottom:25px">My Technical Skills</h3>
+   <div class="skills">
+    <div class="skill"><div class="skill-top"><b>HTML</b><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
+    <div class="skill"><div class="skill-top"><b>CSS</b><span>85%</span></div><div class="bar"><span style="width:85%"></span></div></div>
+    <div class="skill"><div class="skill-top"><b>JavaScript</b><span>75%</span></div><div class="bar"><span style="width:75%"></span></div></div>
+    <div class="skill"><div class="skill-top"><b>Python</b><span>75%</span></div><div class="bar"><span style="width:75%"></span></div></div>
+    <div class="skill"><div class="skill-top"><b>React</b><span>70%</span></div><div class="bar"><span style="width:70%"></span></div></div>
+    <div class="skill"><div class="skill-top"><b>AI Tools</b><span>80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
+   </div>
   </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <h2 class="section-title">My <span>Projects</span></h2>
-
-    <div class="grid">
-      <div class="card project-card">
-        <h3>🍔 Restaurant Website</h3>
-        <p>
-          A sample restaurant website concept with
-          food menu, prices and WhatsApp ordering.
-        </p>
-        <span class="project-type">DEMO CONCEPT</span>
-      </div>
-
-      <div class="card project-card">
-        <h3>🏢 Business Website</h3>
-        <p>
-          A modern business website concept to
-          showcase company services and information.
-        </p>
-        <span class="project-type">DEMO CONCEPT</span>
-      </div>
-
-      <div class="card project-card">
-        <h3>🤖 Wazir AI</h3>
-        <p>
-          My personal AI assistant project,
-          exploring intelligent conversations
-          and digital assistance.
-        </p>
-        <span class="project-type">IN DEVELOPMENT</span>
-      </div>
-    </div>
-  </div>
+ </div>
+</div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="container">
-    <h2 class="section-title">My <span>Services</span></h2>
-
-    <div class="grid services-grid">
-      <div class="card service-card">
-        <div class="service-icon">🌐</div>
-        <h3>Website Development</h3>
-        <p>Modern and responsive websites for businesses.</p>
-      </div>
-
-      <div class="card service-card">
-        <div class="service-icon">📱</div>
-        <h3>App Development</h3>
-        <p>Android application development solutions.</p>
-      </div>
-
-      <div class="card service-card">
-        <div class="service-icon">🤖</div>
-        <h3>AI Integration</h3>
-        <p>AI features and smart digital experiences.</p>
-      </div>
-
-      <div class="card service-card">
-        <div class="service-icon">🛠️</div>
-        <h3>Website Fixing</h3>
-        <p>Website updates, improvements and bug fixing.</p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+ <h2 class="section-title">My <span class="gradient">Services</span></h2>
+ <p class="section-sub">Professional digital solutions for your business</p>
+ <div class="services-grid">
+  <div class="service reveal"><div class="service-icon">🌐</div><h3>Website Development</h3><p>Modern, responsive and professional websites for businesses.</p></div>
+  <div class="service reveal"><div class="service-icon">📱</div><h3>App Development</h3><p>Mobile app interfaces and application development.</p></div>
+  <div class="service reveal"><div class="service-icon">🤖</div><h3>AI Solutions</h3><p>AI assistants, chatbots and smart automation solutions.</p></div>
+  <div class="service reveal"><div class="service-icon">🛒</div><h3>E-Commerce</h3><p>Online shopping stores and digital business solutions.</p></div>
+  <div class="service reveal"><div class="service-icon">🎨</div><h3>UI/UX Design</h3><p>Creative and user-friendly website interfaces.</p></div>
+  <div class="service reveal"><div class="service-icon">⚙️</div><h3>Website Maintenance</h3><p>Website updates, improvements and technical support.</p></div>
+ </div>
+</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-box">
-      <h2 class="section-title">Let's Work <span>Together</span></h2>
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+ <h2 class="section-title">Featured <span class="gradient">Projects</span></h2>
+ <p class="section-sub">Website and application concepts in my portfolio</p>
+ <div class="filters">
+  <button class="filter active" onclick="filterProjects('all',this)">All</button>
+  <button class="filter" onclick="filterProjects('web',this)">Websites</button>
+  <button class="filter" onclick="filterProjects('app',this)">Apps</button>
+  <button class="filter" onclick="filterProjects('ai',this)">AI</button>
+ </div>
+ <div class="projects-grid" id="projectGrid">
 
-      <p>
-        Have a project in mind? Contact me and
-        let's create something great.
-      </p>
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700" alt="Restaurant"><div class="project-info"><h3>Restaurant Website</h3><p>Modern restaurant and food ordering design.</p><small>Concept Showcase</small></div></article>
 
-      <div class="contact-links">
-        <a class="contact-link email"
-          href="mailto:shahidwazir33343@gmail.com">
-          ✉ Email Me
-        </a>
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700" alt="Shopping"><div class="project-info"><h3>E-Commerce Store</h3><p>Online shopping and product showcase.</p><small>Concept Showcase</small></div></article>
 
-        <a class="contact-link"
-          href="https://wa.me/923334385679"
-          target="_blank" rel="noopener">
-          💬 WhatsApp Me
-        </a>
-      </div>
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700" alt="Portfolio"><div class="project-info"><h3>Creative Portfolio</h3><p>Personal portfolio and professional branding.</p><small>Concept Showcase</small></div></article>
 
-      <a class="btn"
-        href="https://wa.me/923334385679?text=Hello%20Shahid%2C%20I%20need%20a%20website.">
-        Hire Me on WhatsApp ↗
-      </a>
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=700" alt="Hospital"><div class="project-info"><h3>Hospital Website</h3><p>Healthcare and appointment website concept.</p><small>Concept Showcase</small></div></article>
 
-      <p style="margin-top:22px">
-        Email: shahidwazir33343@gmail.com
-      </p>
-      <p>WhatsApp: +92 333 4385679</p>
-    </div>
-  </div>
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=700" alt="Education"><div class="project-info"><h3>Education Website</h3><p>School and educational management concept.</p><small>Concept Showcase</small></div></article>
+
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700" alt="Travel"><div class="project-info"><h3>Travel Website</h3><p>Travel destinations and booking concept.</p><small>Concept Showcase</small></div></article>
+
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700" alt="Property"><div class="project-info"><h3>Real Estate Website</h3><p>Property listings and real estate design.</p><small>Concept Showcase</small></div></article>
+
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=700" alt="Blog"><div class="project-info"><h3>Blog Website</h3><p>Modern publishing and blogging platform.</p><small>Concept Showcase</small></div></article>
+
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700" alt="Fitness"><div class="project-info"><h3>Fitness Website</h3><p>Gym and fitness business website concept.</p><small>Concept Showcase</small></div></article>
+
+  <article class="project reveal" data-type="web"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700" alt="Corporate"><div class="project-info"><h3>Corporate Website</h3><p>Professional company website concept.</p><small>Concept Showcase</small></div></article>
+
+  <article class="project reveal" data-type="ai"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700" alt="AI"><div class="project-info"><h3>AI Assistant</h3><p>AI assistant and chatbot interface concept.</p><small>Concept Showcase</small></div></article>
+
+  <article class="project reveal" data-type="app"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700" alt="Mobile App"><div class="project-info"><h3>Mobile App Design</h3><p>Modern mobile application interface concept.</p><small>Concept Showcase</small></div></article>
+
+ </div>
+</div>
 </section>
 
-</main>
+<!-- REVIEWS -->
+<section id="reviews">
+<div class="container">
+ <h2 class="section-title">Client <span class="gradient">Testimonials</span></h2>
+ <p class="section-sub">Sample testimonial layouts — replace with genuine client feedback</p>
+ <div class="reviews-grid">
 
-<footer>
-  <div class="container">
-    © <span id="year"></span> Shahid Wazir |
-    WAZIR DEVELOPER. All Rights Reserved.
-  </div>
-</footer>
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"The website design looks clean, modern and easy to navigate. The overall presentation is impressive."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
 
-<a class="whatsapp-float"
-   href="https://wa.me/923334385679"
-   target="_blank" rel="noopener"
-   aria-label="Chat on WhatsApp">
-  WhatsApp ↗
-</a>
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"Communication and understanding of the project requirements are very important. This is the kind of experience I appreciate."</p><h4>Business Client</h4><small>Sample testimonial</small></div>
 
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"A professional-looking design with a great focus on mobile responsiveness and user experience."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
 
-menuBtn.addEventListener("click", () => {
-  const opened = navLinks.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", opened);
-  menuBtn.textContent = opened ? "✕" : "☰";
-});
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"The attention to detail in the layout and colors makes the website feel polished and attractive."</p><h4>Project Client</h4><small>Sample testimonial</small></div>
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.textContent = "☰";
-  });
-});
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"A clear design approach and an organized layout make the digital experience much better."</p><h4>Business Owner</h4><small>Sample testimonial</small></div>
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"I like the modern style, simple navigation and professional presentation of the website."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
 
-</body>
-  </html>
-  
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"The design feels modern and the different sections are arranged in a very clear way."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
+
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"A responsive-first approach is essential for today's businesses. This design demonstrates that focus."</p><h4>Online Business</h4><small>Sample testimonial</small></div>
+
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"The color combination and typography create a strong professional impression."</p><h4>Project Client</h4><small>Sample testimonial</small></div>
+
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"I appreciate the creative ideas and attention to the overall website experience."</p><h4>Business Client</h4><small>Sample testimonial</small></div>
+
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"The layout is easy to understand, and the website presents its information beautifully."</p><h4>Website Client</h4><small>Sample testimonial</small></div>
+
+  <div class="review reveal"><div class="stars">★★★★★</div><p>"A stylish digital presentation with a modern feel and a clean user interface."</p><h4>Design Client</h4><small>Sample testimonial</small></div>
+
+ </div>
+</div>
+</section>
+
+<!-- CONTA
